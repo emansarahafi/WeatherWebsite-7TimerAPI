@@ -1,0 +1,132 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #00796b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Container for the weather description */
+#description {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1.2em;
+    color: #00796b;
+}
+
+/* City Select dropdown */
+#citySelect {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1em;
+    margin: 20px auto;
+    border-radius: 4px;
+    border: 1px solid #00796b;
+    display: block;
+}
+
+/* Container for the forecast cards */
+#forecastContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: flex-start; /* Aligns cards to the left */
+}
+
+/* Styles for each weather card */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* Adds space below each card */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00796b;
+    text-align: center; /* Centers the title in each card */
+}
+
+.card-text {
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Responsive styling for different screen sizes */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-4 {
+        flex: 1 1 100%;
+    }
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #00796b;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Loader styling */
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #00796b; /* Green */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 50px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
